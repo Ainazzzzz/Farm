@@ -16,4 +16,13 @@ public class Rice extends Plant {
     public void setProduction(String production) {
         this.production = production;
     }
+
+
+    @Override
+    public String toString() {
+        return "Rice{" +
+                super.toString() +
+                "production='" + production + '\'' +
+                '}';
+    }
 }

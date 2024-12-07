@@ -5,8 +5,10 @@ public class Cucumber extends Plant {
     private String production;
 
 
-    public Cucumber(String name, String category, boolean fresh) {
+    public Cucumber(String name, String category, boolean fresh, int height, String  production) {
         super(name, category, fresh);
+        this.height = height;
+        this.production = production;
     }
 
     public int getHeight() {
@@ -23,5 +25,15 @@ public class Cucumber extends Plant {
 
     public void setProduction(String production) {
         this.production = production;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Cucumber{" +
+                super.toString() +
+                "height=" + height +
+                ", production='" + production + '\'' +
+                '}';
     }
 }

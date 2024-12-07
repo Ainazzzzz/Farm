@@ -7,4 +7,9 @@ public class Tomato extends Plant {
     }
 
 
+    @Override
+    public String toString() {
+        return "Tomato{}"+
+                super.toString();
+    }
 }

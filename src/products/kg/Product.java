@@ -1,19 +1,25 @@
 package products.kg;
 
+import products.kg.animals.Animal;
+
 import java.time.LocalDate;
 
 public class Product {
-    private LocalDate expirationDate;
+    private LocalDate expirationDate; // срок годности
     private int price;
-    private int quantity;
+    private int kilogram;
     private String quality;
 
-    public Product(LocalDate expirationDate, int price, int quantity, String quality) {
+    public Product(LocalDate expirationDate, int price, int kilogram, String quality) {
         this.expirationDate = expirationDate;
         this.price = price;
-        this.quantity = quantity;
+        this.kilogram = kilogram;
         this.quality = quality;
     }
+
+    public Product() {
+    }
+
 
     public LocalDate getExpirationDate() {
         return expirationDate;
@@ -31,12 +37,12 @@ public class Product {
         this.price = price;
     }
 
-    public int getQuantity() {
-        return quantity;
+    public int getKilogram() {
+        return kilogram;
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public void setKilogram(int kilogram) {
+        this.kilogram = kilogram;
     }
 
     public String getQuality() {
@@ -52,7 +58,7 @@ public class Product {
         return "Product{" +
                 "expirationDate=" + expirationDate +
                 ", price=" + price +
-                ", quantity=" + quantity +
+                ", kilogram=" + kilogram +
                 ", quality='" + quality + '\'' +
                 '}';
     }

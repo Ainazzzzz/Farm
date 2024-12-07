@@ -4,7 +4,8 @@ import products.kg.Product;
 
 import java.util.Arrays;
 
-public class Customer {
+public class
+    Customer {
     private String name;
     private String address;
     private Product[] products;

@@ -1,9 +1,12 @@
 package products.kg.plants;
 
-public class Plant {
+import products.kg.Product;
+
+public class Plant extends Product {
     private String name;
     private String category;
     private boolean fresh;
+
 
     public Plant(String name, String category, boolean fresh) {
         this.name = name;
@@ -33,5 +36,15 @@ public class Plant {
 
     public void setFresh(boolean fresh) {
         this.fresh = fresh;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Plant{" +
+                "name='" + name + '\'' +
+                ", category='" + category + '\'' +
+                ", fresh=" + fresh +
+                '}';
     }
 }

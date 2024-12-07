@@ -15,4 +15,13 @@ public class Apple extends Plant {
     public void setColor(String color) {
         this.color = color;
     }
+
+
+    @Override
+    public String toString() {
+        return "Apple{" +
+                super.toString() +
+                "color='" + color + '\'' +
+                '}';
+    }
 }

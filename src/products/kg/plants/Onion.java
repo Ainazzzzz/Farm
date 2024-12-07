@@ -16,4 +16,13 @@ public class Onion extends Plant {
     public void setType(String type) {
         this.type = type;
     }
+
+
+    @Override
+    public String toString() {
+        return "Onion{" +
+                super.toString() +
+                "type='" + type + '\'' +
+                '}';
+    }
 }

@@ -15,4 +15,12 @@ public class Potato extends Plant {
     public void setType(String type) {
         this.type = type;
     }
+
+    @Override
+    public String toString() {
+        return "Potato{" +
+                super.toString() +
+                "type='" + type + '\'' +
+                '}';
+    }
 }
