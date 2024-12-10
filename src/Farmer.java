@@ -36,6 +36,7 @@ public class Farmer {
 
 
     public Animal sellAnimalRequest() {
+        Animal resultAnimal = null;
         if (this.requests != null) {
             if (requests.length == 0 || requests == null) {
                 System.out.println("Нету запросов");
@@ -47,16 +48,15 @@ public class Farmer {
                             System.out.println("Хотите отобрить ?");
                             boolean choiceA = sc.nextBoolean();
                             if (choiceA) {
-                                Animal resultAnimal = sellAnimal();
+                                resultAnimal= sellAnimal();
                                 requests[i].setProcessed(true);
-                                return resultAnimal;
                             }
                         }
                     }
                 }
             }
         }
-        return null;
+        return resultAnimal;
     }
 
 
@@ -93,27 +93,18 @@ public class Farmer {
 
         int choice = sc.nextInt();
         Animal[] newAnimals = new Animal[animals.length - 1];
-        boolean found = false;
+        Animal choicedANimal = animals[choice];
 
         for (int i = 0; i < animals.length; i++) {
-            if (choice == i ){
-                found = true;
-                continue;
+            if (i != choice){
+                int newIndex = i < choice ? i : i - 1 ;
+                newAnimals[newIndex] = animals[i];
             }
-            if (found){
-                i--;
-                newAnimals[i] = animals[i];
-            } else {
-                newAnimals[i] = animals[i];
-            }
-            return animals[i];
         }
 
 
-
-        this.setAnimals(newAnimals);
-
-        return null;
+        animals = newAnimals;
+        return choicedANimal;
     }
 
     public Plant sellPlant(){
@@ -121,19 +112,19 @@ public class Farmer {
         System.out.println("Выберите растение которого хотите продать");
 
         int choice = sc.nextInt();
-        Plant[] newPlants = new Plant[animals.length - 1];
+        Plant[] newPlants = new Plant[plants.length - 1];
+        Plant choicedPlant = plants[choice];
 
-
-        for (int i = 0, j = 0 ;  i < plants.length; i++) {
-            if ( i != choice){
-                newPlants[j++] = plants[i];
-                return plants[choice];
+        for (int i = 0;  i < plants.length; i++) {
+            if (i != choice){
+                int newIndex = i < choice ? i : i - 1 ;
+                newPlants[newIndex] = plants[i];
             }
         }
 
-        this.setPlants(newPlants);
+        plants = newPlants;
 
-        return null;
+        return choicedPlant;
     }
 
 

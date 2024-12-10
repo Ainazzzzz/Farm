@@ -156,8 +156,8 @@ public class Main {
                                         break;
                                     case 3:
                                         System.out.println("Введите название");
-                                        String nameHorse = sc.nextLine();
                                         sc.nextLine();
+                                        String nameHorse = sc.nextLine();
                                         System.out.println("Введите возварст");
                                         int ageHorse = sc.nextInt();
                                         System.out.println("Введите гендер");
@@ -208,6 +208,7 @@ public class Main {
                             case 3:
                                 Animal resultAnimal = farmer.sellAnimal();
                                 System.out.println(resultAnimal);
+                                System.out.println(Arrays.toString(farmer.getAnimals()));
                                 break;
                         }
 
@@ -237,9 +238,8 @@ public class Main {
                                 switch (choiceNewPlant) {
                                     case 1:
                                         System.out.println("Введите имя");
-                                        String nameApple = sc.nextLine();
-
                                         sc.nextLine();
+                                        String nameApple = sc.nextLine();
 
                                         System.out.println("Введите категорию");
                                         String categoryApple = sc.nextLine();
@@ -248,9 +248,10 @@ public class Main {
                                         boolean freshApple = sc.nextBoolean();
 
                                         System.out.println("Введите цвет");
+                                        sc.nextLine();
                                         String colorApple = sc.nextLine();
 
-                                        sc.nextLine();
+
 
                                         Plant newApple = new Apple(nameApple, categoryApple, freshApple, colorApple);
                                         Plant[] addedApple = farmer.addPlant(newApple);
@@ -260,9 +261,9 @@ public class Main {
                                     case 2:
 
                                         System.out.println("Введите имя");
+                                        sc.nextLine();
                                         String nameCucumber = sc.nextLine();
 
-                                        sc.nextLine();
 
                                         System.out.println("Введите категорию");
                                         String categoryCucumber = sc.nextLine();
@@ -272,9 +273,10 @@ public class Main {
 
 
                                         System.out.println("Введите высоту");
+                                        sc.nextLine();
                                         int heightCucumber = sc.nextInt();
 
-                                        sc.nextLine();
+
 
                                         System.out.println("Введите проиводство");
                                         String productionCucumber = sc.nextLine();
@@ -287,9 +289,10 @@ public class Main {
                                     case 3:
 
                                         System.out.println("Введите имя");
+                                        sc.nextLine();
                                         String nameOnion = sc.nextLine();
 
-                                        sc.nextLine();
+
 
                                         System.out.println("Введите категорию");
                                         String categoryOnion = sc.nextLine();
@@ -311,9 +314,10 @@ public class Main {
                                     case 4:
 
                                         System.out.println("Введите имя");
+                                        sc.nextLine();
                                         String nameTomato = sc.nextLine();
 
-                                        sc.nextLine();
+
 
                                         System.out.println("Введите категорию");
                                         String categoryTomato = sc.nextLine();
@@ -333,9 +337,10 @@ public class Main {
                                         break;
                                     case 5:
                                         System.out.println("Введите имя");
+                                        sc.nextLine();
                                         String nameRice = sc.nextLine();
 
-                                        sc.nextLine();
+
 
                                         System.out.println("Введите категорию");
                                         String categoryRice = sc.nextLine();
@@ -355,9 +360,10 @@ public class Main {
                                         break;
                                     case 6:
                                         System.out.println("Введите имя");
+                                        sc.nextLine();
                                         String namePotato = sc.nextLine();
 
-                                        sc.nextLine();
+
 
                                         System.out.println("Введите категорию");
                                         String categoryPotato = sc.nextLine();
@@ -393,6 +399,7 @@ public class Main {
                             case 3:
                                 Plant resultPlant = farmer.sellPlant();
                                 System.out.println(resultPlant);
+                                System.out.println(Arrays.toString(farmer.getPlants()));
                                 break;
                         }
 
